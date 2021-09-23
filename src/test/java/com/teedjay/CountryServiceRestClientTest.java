@@ -18,7 +18,7 @@ public class CountryServiceRestClientTest {
 
     @Test
     public void fetchCountries() {
-        var response = countryService.getByName("norway");
+        var response = countryService.getAllCountries();
         assertEquals(3, response.size());
         assertTrue(response.contains(new Country("Norway", "Oslo")), "Capital of Norway should be Oslo");
     }

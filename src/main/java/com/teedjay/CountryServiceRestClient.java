@@ -14,6 +14,6 @@ public interface CountryServiceRestClient {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    Set<Country> getByName(String countryName);
+    Set<Country> getAllCountries();
 
 }
