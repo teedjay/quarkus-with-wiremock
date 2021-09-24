@@ -35,8 +35,11 @@ public class WireMockEnabled implements QuarkusTestResourceLifecycleManager {
             )
         );
 
-        // return system properties that should be set for the running test
-        return Map.of("com.teedjay.CountryServiceRestClient/mp-rest/url", "http://localhost:" + wireMockServer.port());
+        // return properties that should be set for the running test
+        return Map.of(
+            "com.teedjay.CountryServiceRestClient/mp-rest/url", "http://localhost:" + wireMockServer.port(),
+            "wiremock.port", "" + wireMockServer.port()
+            );
     }
 
     @Override
